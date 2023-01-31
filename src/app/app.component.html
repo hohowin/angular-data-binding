@@ -3,6 +3,7 @@
   <ul>
     <li *ngFor="let bev of beverages">{{bev}}</li>
   </ul>
+  Change today's beverage: <input type="text" [(ngModel)]="currentBeverage"/>
   <!-- Passing the currentBeverage from parent to beverage in child-->
   <app-beverages [beverage]="currentBeverage" (newBeverageEvent)="addBeverage($event)"></app-beverages>
 </div>
